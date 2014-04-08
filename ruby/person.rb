@@ -1,47 +1,52 @@
+load 'helper.rb'
+
 class Person
   include Helper
-  attr_accessible :attributes, :energy
+  attr_accessor :attributes, :energy
 
-  def initalize(attributes = {})
+  def initialize(attributes={})
     @attributes = attributes
-    @energy = 10
+    @energy = 20
   end
 
   # This returns a string of the person's name
   def name
-    attributes(:name)
+    @attributes["name"]
   end
-
+  # This is spliting the name into two parts and selecting the first part
   def first_name
     name.split(' ').first
   end
 
+  # This is spliting the name into two parts and selecting the second part
   def last_name
     name.split(' ').last
   end
 
   def age
-    attributes[age]
+    @attributes["age"].to_i
   end
 
   def birthyear
-     age - Time.now.to_i
+    year = Time.now.year.to_i
+    results = (year - age)
+    results
   end
 
   def say(words)
-    puts 'words'
+    puts words
   end
 
   def run
-    @energy -= rand(5)
+    @energy -=  5
   end
 
   def energy_level
     case @energy
-    when -100..-1
-      "OMG ABOUT TO DIE!
-    when 0..
-      "tired'
+    when 100..1
+      "OMG ABOUT TO DIE!"
+    when 0..4
+      "tired"
     when 4..6
       "doing ok"
     when 6..10
