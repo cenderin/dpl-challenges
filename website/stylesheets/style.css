@@ -54,6 +54,9 @@ body{
 .marketing p + h4 {
   margin-top: 28px;
 }
+.marketing img {
+  width: 100%;
+}
 
 @media screen and (min-width: 768px) {
   .header,
