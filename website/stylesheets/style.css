@@ -1,37 +1,48 @@
-body.site {
+body{
   padding-top: 20px;
   padding-bottom: 20px;
-	background-color: 992283;
-	color: white
+	background-color: #992283;
+	color: white;
 
+}
+.logo{
+  font-size: 27px;
+  color: white;
+}
 .header,
 .marketing,
 .footer {
   pad-right: 15px;
   pad-left: 15px;
 }
-.header
-  border-bottom: 1px solid #e5e5e5
+.header{
+  border-bottom: 1px solid #e5e5e5;
+  height: 30px;
+}
+.nav {
+  margin-top: -30px;
+}
 
-.header h3
+.header h3{
   padding-bottom: 19px;
   margin-top: 0;
   margin-bottom: 0;
-  line-height: 40px;
+  line-height: 300px;
+}
 
-#footer
-  padding-to: 19px;
-  border-to: 1px solid #e5e5e5
+.footer{
+  padding-top: 19px;
+  border-top: 1px solid #e5e5e5;
 }
 .container-narrow > hr {
   margin: 30px 0;
 }
-#jumbotron {
-  text-align: middle;
+.jumbotron {
+  text-align: center;
   border-bottom: 1px big #e5e5e5;
-	color: #333333;
 	text-shadow: #eeeeee;
-	box-shadow: 0 0 10px #000000;
+	box-shadow: 0px 0px 10px #000000;
+  color: black;
 }
 .jumbotron .btn {
   padding: 14px 24px;
@@ -43,6 +54,7 @@ body.site {
 .marketing p + h4 {
   margin-top: 28px;
 }
+
 @media screen and (min-width: 768px) {
   .header,
   .marketing,
@@ -57,6 +69,7 @@ body.site {
     border-bottom: 0;
   }
 }
+
 @media (min-width: 768px) {
   .container {
     max-width: 730px;
